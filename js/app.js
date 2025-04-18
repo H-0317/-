@@ -2,23 +2,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // 示例数据 - 9个工具和9个项目模板
     const data = {
         profile: {
-            name: "我的工作台",
-            bio: "高效工具集合 | 项目管理系统"
+            name: "阿飞工作台",
+            bio: "高效工具 | 项目管理"
         },
         tools: [
             {
                 name: "GitHub",
-                url: "https://github.com",
+                url: "https://github.com/H-0317",
                 icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.7 2.6 1.2 3.2 1 .1-.8.4-1.2.7-1.5-2.5-.3-5.1-1.2-5.1-5.5 0-1.2.4-2.2 1.1-3-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3 1.1a10.5 10.5 0 0 1 5.5 0c2.1-1.4 3-1.1 3-1.1.6 1.6.2 2.8.1 3.1.7.8 1.1 1.8 1.1 3 0 4.3-2.6 5.2-5.1 5.5.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3'/%3E%3C/svg%3E"
             },
             {
-                name: "VSCode",
-                url: "https://code.visualstudio.com",
+                name: "网站工具",
+                url: "https://tcn3vo15w1r4.feishu.cn/wiki/ELsQw5KYQikWpmkB68ucuwN5n1b?from=from_copylink",
                 icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z'/%3E%3C/svg%3E"
             },
             {
-                name: "Figma",
-                url: "https://figma.com",
+                name: "软件工具",
+                url: "https://tcn3vo15w1r4.feishu.cn/docx/D1zKdXLpQoUC06xy87icqpH6n5e?from=from_copylink",
                 icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 12c0 1.933-1.567 3.5-3.5 3.5S8.5 13.933 8.5 12s1.567-3.5 3.5-3.5 3.5 1.567 3.5 3.5zm-3.5-7C8.567 5 6 7.567 6 10.5S8.567 16 12 16s6-2.567 6-5.5S15.433 5 12 5zm0 14c-1.933 0-3.5 1.567-3.5 3.5h7c0-1.933-1.567-3.5-3.5-3.5zm0-7c-1.933 0-3.5 1.567-3.5 3.5s1.567 3.5 3.5 3.5 3.5-1.567 3.5-3.5-1.567-3.5-3.5-3.5z'/%3E%3C/svg%3E"
             },
             {
@@ -54,57 +54,57 @@ document.addEventListener('DOMContentLoaded', function() {
         ],
         projects: [
             {
-                name: "个人博客",
-                url: "#",
-                description: "技术分享平台",
+                name: "公众号",
+                url: "https://tcn3vo15w1r4.feishu.cn/wiki/JDX0wwaT2io7IUk4Ks0c8lYWnXc?from=from_copylink",
+                description: "流量主分成计划",
                 icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/%3E%3C/svg%3E"
             },
             {
-                name: "电商平台",
-                url: "#",
-                description: "在线购物系统",
+                name: "超级玩家",
+                url: "https://tcn3vo15w1r4.feishu.cn/wiki/LO86wYdmJigrpPkWZJgcIeWInGf?from=from_copylink",
+                description: "推文，推剧",
                 icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z'/%3E%3C/svg%3E"
             },
             {
-                name: "天气应用",
-                url: "#",
-                description: "实时天气查询",
+                name: "免费项目",
+                url: "https://tcn3vo15w1r4.feishu.cn/wiki/KFEjwmJSvivNmtkLFj3cvRx9n8d?from=from_copylink",
+                description: "1688无货源电商",
                 icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z'/%3E%3C/svg%3E"
             },
             {
-                name: "任务管理",
-                url: "#",
-                description: "个人待办事项",
+                name: "免费项目",
+                url: "https://tcn3vo15w1r4.feishu.cn/wiki/QgCPwGYNiiaBYckIyJQcu8omnRb?from=from_copylink",
+                description: "四大运营商流量卡代理",
                 icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z'/%3E%3C/svg%3E"
             },
             {
-                name: "音乐播放器",
+                name: "暂未更新",
                 url: "#",
-                description: "在线音乐平台",
+                description: "暂未更新",
                 icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6zm-2 16c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z'/%3E%3C/svg%3E"
             },
             {
-                name: "投资追踪",
+                name: "暂未更新",
                 url: "#",
-                description: "个人财务管理",
+                description: "暂未更新",
                 icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z'/%3E%3C/svg%3E"
             },
             {
-                name: "学习平台",
+                name: "暂未更新",
                 url: "#",
-                description: "在线课程系统",
+                description: "暂未更新",
                 icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z'/%3E%3C/svg%3E"
             },
             {
-                name: "健身追踪",
+                name: "暂未更新",
                 url: "#",
-                description: "运动数据记录",
+                description: "暂未更新",
                 icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13 5v6h1.17L12 13.17 9.83 11H11V5h2zm6.66 2.34l-1.41 1.41C17.84 8.09 18 8.52 18 9c0 1.1-.9 2-2 2s-2-.9-2-2c0-.48.16-.91.41-1.25l-1.41-1.41C12.34 7.16 11.75 7 11.11 7c-2.53 0-4.61 1.96-4.83 4.44L4 12.13V16h2v-2.07c0-.52.19-1 .5-1.36l1.54-1.96c.32-.4.77-.61 1.25-.61s.93.21 1.25.61l1.54 1.96c.31.36.5.84.5 1.36V19H9v2h6v-2h-1v-3.07c0-.52.19-1 .5-1.36l1.54-1.96c.32-.4.77-.61 1.25-.61s.93.21 1.25.61l1.54 1.96c.31.36.5.84.5 1.36V22h8v-9.88c0-3.15-2.23-5.83-5.34-6.78z'/%3E%3C/svg%3E"
             },
             {
-                name: "旅行计划",
+                name: "暂未更新",
                 url: "#",
-                description: "行程规划工具",
+                description: "暂未更新",
                 icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z'/%3E%3C/svg%3E"
             }
         ]

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="阿飞导航站">
+    <meta name="referrer" content="no-referrer">
+    <title>阿飞工作台</title>
+    <style>
+        /* 内联SVG图标 */
+        .icon-nav {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: currentColor;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        .icon-tools {
+            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21.71 20.29L18 16.61A7 7 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.39zM11 18a5 5 0 1 1 5-5 5 5 0 0 1-5 5z'/%3E%3C/svg%3E") no-repeat center;
+        }
+        .icon-projects {
+            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-9 14H6V7h4v10zm6 0h-4V7h4v10z'/%3E%3C/svg%3E") no-repeat center;
+        }
+        .icon-contact {
+            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/%3E%3C/svg%3E") no-repeat center;
+        }
+        .icon-search {
+            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E") no-repeat center;
+        }
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <!-- 个人信息区 -->
+        <header class="profile">
+            <div class="avatar-container">
+                <img src="assets/avatar.jpg" alt="个人头像" class="avatar" loading="lazy">
+            </div>
+            <h1 class="name">工作台</h1>
+            <p class="bio">高效工具集合 | 项目管理系统</p>
+            <div class="contact">
+                <button id="contact-btn" class="contact-btn">
+                    <span class="icon-nav icon-contact"></span>联系我
+                </button>
+                <div id="qr-popup" class="qr-popup">
+                    <img src="assets/wechat-qr.png" alt="联系二维码" loading="lazy">
+                    <p>请使用微信扫码联系</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- 搜索框 -->
+        <div class="search-container">
+            <span class="icon-nav icon-search"></span>
+            <input type="text" id="search" placeholder="搜索工具或项目..." autocomplete="off">
+        </div>
+
+        <!-- 导航标签 -->
+        <nav class="tabs">
+            <button class="tab active" data-tab="tools">
+                <span class="icon-nav icon-tools"></span>常用工具
+            </button>
+            <button class="tab" data-tab="projects">
+                <span class="icon-nav icon-projects"></span>我的项目
+            </button>
+        </nav>
+
+        <!-- 内容区 -->
+        <main>
+            <section id="tools" class="tab-content active">
+                <div class="grid-container" id="tools-container"></div>
+            </section>
+            <section id="projects" class="tab-content">
+                <div class="grid-container" id="projects-container"></div>
+            </section>
+        </main>
+
+        <!-- 页脚 -->
+        <footer class="footer">
+            <p>© 2023 个人工作台 | <a href="http://beian.miit.gov.cn" target="_blank" rel="noopener noreferrer">京ICP备XXXXXX号</a></p>
+            <p class="disclaimer">本网站为个人工作使用，不涉及商业用途</p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
